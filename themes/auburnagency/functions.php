@@ -131,39 +131,69 @@ function auburnagency_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Fat Footer One', 'auburnagency' ),
-		'id'            => 'fat-footer-one',
+		'name'          => __( 'Twitter Feed', 'auburnagency' ),
+		'id'            => 'twitter-feed',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'RSS Feeds', 'auburnagency' ),
+		'id'            => 'rss-fee',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Fat Footer One', 'auburnagency' ),
+		'id'            => 'fat-footer-one',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col span_3_of_12">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="footer-widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Fat Footer Two', 'auburnagency' ),
 		'id'            => 'fat-footer-two',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col span_3_of_12">
+							<div class="fa-stack fa-2x">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-map-marker fa-stack-1x"></i>
+							</div><div class="alignleft">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h3 class="footer-widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Fat Footer Three', 'auburnagency' ),
 		'id'            => 'fat-footer-three',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col span_3_of_12">
+							<div class="fa-stack fa-2x">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-phone fa-stack-1x"></i>
+							</div><div class="alignleft">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h3 class="footer-widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Fat Footer Four', 'auburnagency' ),
 		'id'            => 'fat-footer-four',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col span_3_of_12">
+							<div class="fa-stack fa-2x">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-envelope fa-stack-1x"></i>
+							</div><div class="alignleft">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h3 class="footer-widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
