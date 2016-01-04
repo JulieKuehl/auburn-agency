@@ -13,7 +13,7 @@ if ( ! function_exists( 'auburnagency_google_fonts' ) ) :
  */
 function auburnagency_google_fonts() {
 	$query_args = array(
-		'family' => 'Source+Sans+Pro:200,300,400,600',
+		'family' => 'Muli:400,400italic|Source+Sans+Pro:400,700',
 
 		// Here's an example for changing fonts.
 		// 
@@ -118,6 +118,42 @@ function auburnagency_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Fat Footer One', 'auburnagency' ),
+		'id'            => 'fat-footer-one',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Fat Footer Two', 'auburnagency' ),
+		'id'            => 'fat-footer-two',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Fat Footer Three', 'auburnagency' ),
+		'id'            => 'fat-footer-three',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Fat Footer Four', 'auburnagency' ),
+		'id'            => 'fat-footer-four',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 endif; // auburnagency_widgets_init
