@@ -13,6 +13,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-container">
+
 			<div class="fat-footer">
 				<? dynamic_sidebar( 'fat-footer-one' ); ?>
 				<!-- Address icon -->
@@ -34,9 +35,15 @@
 				</span>
 				<? dynamic_sidebar( 'fat-footer-four' ); ?>
 			</div>
+
+			<div class="footer-links">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false ) ); ?>
+			</div>
+
 			<div class="site-info">
-				&copy; <?php date( 'Y' ); ?> Auburn Agency Inc. Crop Insurance. Site powered and designed by <a href="http://bcomonline.com">BCom Solutions, LLC.</a>
+				&copy; <?php echo date( 'Y' ); ?> Auburn Agency Inc. Crop Insurance. Site powered and designed by <a href="http://bcomonline.com">BCom Solutions, LLC.</a>
 			</div><!-- .site-info -->
+
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

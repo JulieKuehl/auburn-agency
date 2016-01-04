@@ -84,6 +84,8 @@ function auburnagency_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'auburnagency' ),
+		'utility' => __( 'Utility Menu', 'auburnagency' ),
+		'footer' => __( 'Footer Links', 'auburnagency' ),
 	) );
 
 	/*

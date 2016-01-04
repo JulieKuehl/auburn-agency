@@ -30,7 +30,7 @@
 			</div><!-- .site-branding -->
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="container">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'utlity', 'container' => false ) ); ?>
 				</div>
 			</nav><!-- #site-navigation -->
 			<div id="mobile-menu-switch">
