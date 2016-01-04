@@ -85,7 +85,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Objects can range from something as simple as a .wrapper element, to layout systems, to media objects.
  *
  */
-//@import "objects/wrappers";
+@import "objects/wrappers";
 //@import "objects/grid";
 //@import "objects/media";
 
@@ -97,7 +97,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Adding new components and features usually makes up the vast majority of development.
  *
  */
-//@import "components/branding";
+@import "components/branding";
 //@import "components/site-nav";
 //@import "components/nav-links";
 //@import "components/buttons";
