@@ -29,6 +29,15 @@ endif; // auburnagency_google_fonts
 add_action('wp_enqueue_scripts', 'auburnagency_google_fonts');
 
 /**
+ * Add external fontawesome stylesheet
+ *
+ */
+function auburnagency_font_awesome(){
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+}
+add_action('wp_enqueue_scripts','auburnagency_font_awesome');
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
