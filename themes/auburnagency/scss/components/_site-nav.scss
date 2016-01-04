@@ -1,0 +1,202 @@
+/*
+ * Style for the nav menus
+ *
+ */
+
+// MAIN NAVIGATION MENU
+// Courtesy http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu
+
+nav#site-navigation {
+    float: right;
+    padding: 0;
+    margin-right: 0;
+    // vertically center the nav menu in the site-branding wrapper
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+// hide submenus
+nav ul ul {
+    display: none;
+}
+
+// show submenus on hover
+nav ul li:hover > ul {
+    display: block;
+}
+
+// set the styling for the menu
+nav ul {
+    //list-style: none;
+    display: inline-block;
+    //text-align: center;
+    //vertical-align: middle;
+}
+nav ul:first-child {
+    padding-left: 0;
+}
+nav ul:last-child {
+    padding-right: 0;
+}
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+// set the styling for the menu items
+nav ul li {
+    display: table-cell;
+    float: left;
+    padding: 0.5em;
+    background-color: $color-secondary;
+    width: 5em;
+    height: 5em;
+    overflow: visible;
+    margin-right: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li:hover {
+    background: darken($color-secondary, 10%);
+}
+nav ul li:hover a {
+    //color: white;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+nav ul li a:first-child {
+    padding-left: 0;
+}
+nav ul li a:last-child {
+    padding-right: 0;
+}
+
+// set the styling for the submenus
+nav ul ul {
+    background: lighten($color-secondary, 40%);
+    padding: 0 0 0 0.5em;
+    position: absolute;
+    top: 100%;
+    width: 12em;
+    z-index: 10;
+}
+nav ul ul li {
+    float: none;
+    border-bottom: 1px solid $color-background;
+    position: relative;
+}
+nav ul ul li:first-child {
+    border-top: 1px solid $color-background;
+}
+nav ul ul li a {
+    padding: 1em;
+    //color: $color-primary;
+}
+nav ul ul li a:hover {
+    //background: $color-secondary;
+}
+
+nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+// MOBILE MENU
+
+#mobile-menu-switch {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none
+}
+#mobile-menu-switch .toggle {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 60px;
+    display: block;
+    width: 70px;
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-background;
+}
+#mobile-menu-switch .toggle:active {
+    top:0;
+}
+#mobile-menu-switch .toggle.on {
+    border-left: 1px solid #dbdbdb;
+    background-color: $color-background;
+}
+
+// UTILITY MENU
+
+#menu-utility-menu {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2.0225em;
+    padding-left: 2.0225em;
+}
+
+#menu-utility-menu.menu {
+    display: block;
+    float: left;
+    font-size: 0.8em;
+    padding-left: 0;
+    padding-top: 0.25em;
+    list-style: none;
+}
+
+#menu-utility-menu li {
+    float: left;
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: 2em;
+
+    & a {
+        color: darken(white, 5%);
+        font-weight: 300;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}
+
+#menu-utility-menu li:first-child {
+    margin-left: 0;
+}
+
+// SOCIAL MEDIA LINKS MENU
+
+#menu-social-media-links {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2.0225em;
+    padding-left: 2.0225em;
+}
+
+#menu-social-media-links.menu {
+    display: block;
+    float: right;
+    padding-left: 0;
+    list-style: none;
+}
+
+#menu-social-media-links li {
+    float: left;
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: 2em;
+}

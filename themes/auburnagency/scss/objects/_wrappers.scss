@@ -1,0 +1,58 @@
+.section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.superheader {
+    background-color: $color-secondary;
+    color: white;
+    padding: 0.5em 0;
+}
+
+.site-header {
+ 	background-color: darken($color-background, 5%);
+    padding-top: 0.5em;
+    padding-bottom: 0;
+ }
+
+nav {
+    //background-color: $color-background;
+}
+
+.site-content {
+    background-color: $color-background;
+    //background-image: url("/wp-content/themes/pathways/images/exclusive_paper.png");
+}
+
+.site-footer {
+ 	background-color: darken($color-background, 5%);
+    padding-top: 1em;
+    padding-bottom: 1em;
+ }
+
+.site-footer .container {
+    padding-right: 0;
+    padding-left: 0;
+ }
+
+.site-info {
+    background-color: $color-secondary;
+    color: lighten($color-secondary, 40%);
+    font-size: .8em;
+    width: 100%;
+    padding: .5em 0;
+
+    a {
+        color: lighten($color-secondary, 40%);
+
+        &:hover {
+            color: $color-background;
+        }
+    }
+}
+
+.site-info .container {
+    text-align: center;
+}
+

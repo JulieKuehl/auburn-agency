@@ -1,3 +1,51 @@
+@charset "UTF-8";
+/*!
+Theme Name: Pathways Outdoor Ministries
+Theme URI: http://design.org/wordpress-starter-theme/
+Author: Julie Kuehl
+Author URI: http://juliekuehl.com
+Description: A custom-built, kick-ass WordPress theme based on the Forward starter theme.
+Version: 2016
+Text Domain: pathwaysllc
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/*
+ * This theme uses the Inverted Triangle CSS method of organization with Sass
+ * http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+ * and
+ * follows the BEM Sass naming convention
+ * http://getbem.com/
+ *
+ */
+/*
+ * SETTINGS
+ * This layer should only house settings that need to be accessed from anywhere, including Sass variables.
+ * Examples of global settings might be things like the base font size, colour palettes, and so on.
+ *
+ */
+/*
+ * TOOLS
+ * This layer should include global mixins and functions.
+ * Any mixin or function that does not need accessing globally should belong in the partial to which it relates.
+ *
+ */
+/*
+ * GENERIC
+ * The Generic layer is the first one that actually produces any CSS.
+ * It houses very high-level, far reaching styles.
+ * This layer is seldom modified, and is usually the same across any projects you work on.
+ * It contains things like Normalize.css, global box-sizing rules, CSS resets and so on.
+ *
+ *
+ * NOTE: You probably only need one of the following...
+ *
+ * Reset.css unstyles every element.
+ * Normalize.css styles browsers to render elements more consistently with each other.
+ * Sanitize.css styles browsers to render elements more consistently with developer expectations and preferences.
+ *
+ */
 /*!
 Theme Name: Auburn Agency
 Theme URI: http://design.org/wordpress-starter-theme/
@@ -1153,5 +1201,239 @@ input[type=submit]:active {
 
   .gallery .gallery-item:last-child {
     margin-right: 0; } }
+/*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*
+ * Sanitize.css styles browsers to render elements more consistently with developer expectations and preferences.
+ * Normalize.css styles browsers to render elements more consistently with each other.
+ * Reset.css unstyles every element.
+ *
+ */
+/*
+ * Normalization
+ */
+audio:not([controls]) {
+  display: none; }
 
-/*# sourceMappingURL=style.css.map */
+button {
+  overflow: visible;
+  -webkit-appearance: button; }
+
+details {
+  display: block; }
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%; }
+
+input {
+  -webkit-border-radius: 0; }
+  input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button; }
+  input[type="number"] {
+    width: auto; }
+  input[type="search"] {
+    -webkit-appearance: textfield; }
+    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none; }
+
+main {
+  display: block; }
+
+pre {
+  overflow: auto; }
+
+progress {
+  display: inline-block; }
+
+small {
+  font-size: 75%; }
+
+summary {
+  display: block; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+template {
+  display: none; }
+
+textarea {
+  overflow: auto; }
+
+[hidden] {
+  display: none; }
+
+/*
+ * Universal inheritance
+ */
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+* {
+  font-size: inherit;
+  line-height: inherit; }
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit; }
+
+/*
+ * Opinionated defaults
+ */
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0; }
+
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0; }
+
+:root {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: default;
+  font: 100%/1.5 sans-serif;
+  text-rendering: optimizeLegibility; }
+
+a {
+  text-decoration: none; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent; }
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  min-height: 1.5em; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; }
+
+nav ol,
+nav ul {
+  list-style: none; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+  select::-ms-expand {
+    display: none; }
+  select::-ms-value {
+    color: currentColor; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea {
+  resize: vertical; }
+
+::-moz-selection {
+  background-color: #B3D4FC;
+  color: #ffffff;
+  text-shadow: none; }
+
+::selection {
+  background-color: #B3D4FC;
+  color: #ffffff;
+  text-shadow: none; }
+
+[aria-busy="true"] {
+  cursor: progress; }
+
+[aria-controls] {
+  cursor: pointer; }
+
+[aria-disabled] {
+  cursor: default; }
+
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute; }
+  [hidden][aria-hidden="false"]:focus {
+    clip: auto; }
+
+/*
+ * ELEMENTS
+ * These are bare, unclassed HTML elements.
+ * It is very rarely added to or changed after initial setup.
+ * Once we have defined element-level styles, all additions and deviations should be implemented using classes.
+ *
+ */
+/*
+ * OBJECTS
+ * This is the first layer in which we find class-based selectors.
+ * These are concerned with styling non-cosmetic design patterns, or 'objects'.
+ * Objects can range from something as simple as a .wrapper element, to layout systems, to media objects.
+ *
+ */
+/*
+ * COMPONENTS
+ * The Components layer is where we begin to style recognizable pieces of UI.
+ * We shouldn't find any selectors with a lower specificity than one class in this layer.
+ * This is where the majority of your work will happen after initial project set-up.
+ * Adding new components and features usually makes up the vast majority of development.
+ *
+ */
+/*
+ * VENDORS
+ * This layer addresses styling specific to vendor plugins, such as Gravity Forms or The Events Calendar.
+ * It has the power to override anything at all that has gone before it.
+ *
+ */
+/*
+ * TRUMPS
+ * This layer beats – or 'trumps' – all other layers.
+ * It has the power to override anything at all that has gone before it.
+ * It is inelegant and heavy-handed, and contains utility and helper classes, hacks and overrides.
+ * The !important tags should go here.
+ *
+ */

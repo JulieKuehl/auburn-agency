@@ -1,0 +1,25 @@
+.widget {
+    border-bottom: none;
+}
+
+.welcome {
+    @include outer-container;
+}
+
+.front-page-welcome-area {
+    @include span-columns(6);
+
+    margin: 1em 0;
+}
+
+.footer-right {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+
+    button {
+        margin-bottom: 0;
+        margin-top: .5em;
+    }
+}

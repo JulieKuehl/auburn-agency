@@ -1,0 +1,25 @@
+/*
+ * Style for the brand info in the header area of the site
+ * Note: .site-header is found in the _wrappers.scss file
+ * 
+ */
+
+.site-branding {
+    position: relative;
+
+    img {
+        max-height: 8em;
+        margin-right: 2em;
+    }
+}
+
+.site-title {
+    font-family: $font-title;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.site-logo {
+    text-decoration: none;
+}

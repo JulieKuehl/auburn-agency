@@ -1,0 +1,29 @@
+p,
+.camp-metadata,
+.entry-content {
+    @include font-paragraph();
+}
+
+.camp-metadata {
+    color: $color-accent;
+}
+
+.program-sessions {
+    color: $color-accent;
+    list-style: none;
+    line-height: 2.3;
+    margin-top: 2em;
+}
+
+.social-sharing li a {
+    font-size: .8em;
+    color: $color-secondary;
+}
+
+.camp-photos {
+    margin-top: 2em;
+}
+
+.cnss-social-icon {
+    max-height: 32px;
+}
