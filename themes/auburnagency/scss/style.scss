@@ -29,7 +29,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "settings/colors";
 @import "settings/fonts";
 //@import "settings/structure";
-//@import "settings/breakpoints";
+@import "settings/breakpoints";
 
 /*
  * TOOLS
@@ -40,7 +40,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 //@import "bourbon/bourbon";
 //@import "neat/grid-settings";
 //@import "neat/neat";
-//@import "tools/mixins";
+@import "tools/mixins";
 
 
 /*
@@ -86,7 +86,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  */
 @import "objects/wrappers";
-//@import "objects/grid";
+@import "objects/grid";
 //@import "objects/media";
 
 /*
@@ -98,12 +98,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  */
 @import "components/branding";
-//@import "components/site-nav";
+@import "components/site-nav";
 //@import "components/nav-links";
 //@import "components/buttons";
 //@import "components/forms";
 //@import "components/slider";
-//@import "components/widgets";
+@import "components/widgets";
 //@import "components/carousel";
 //@import "components/comments";
 //@import "components/gallery";
@@ -126,6 +126,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * The !important tags should go here.
  *
  */
-//@import "trumps/clearfix";
+@import "trumps/clearfix";
 //@import "trumps/utilities";
 //@import "trumps/shame";

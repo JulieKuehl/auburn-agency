@@ -15,6 +15,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<section class="main-area">
+				<div class="container">
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
@@ -27,6 +30,9 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; // end of the loop. ?>
+
+				</div>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

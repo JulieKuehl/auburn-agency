@@ -1,3 +1,5 @@
+.site-header:after,
+.site-content:after,
 .section:after {
     content: "";
     display: table;
@@ -5,9 +7,9 @@
 }
 
 .site-header {
-    border-bottom: 3px solid $color-primary;
     padding-top: 0.5em;
     padding-bottom: 0;
+    border-bottom: 3px solid $color-primary;
  }
 
 nav {
@@ -17,6 +19,15 @@ nav {
 .site-content {
     background-color: $color-background;
     //background-image: url("/wp-content/themes/auburnagency/images/exclusive_paper.png");
+}
+
+.news-feeds {
+    background-color: darken($color-background, 10%);
+}
+
+.twitter-feed,
+.rss-feeds {
+    background-color: $white;
 }
 
 .site-footer {

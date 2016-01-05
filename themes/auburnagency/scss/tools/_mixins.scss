@@ -30,3 +30,11 @@
   font-family: $font-body;
   line-height: 1.8;
 }
+
+@mixin clearfix() {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}

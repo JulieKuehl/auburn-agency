@@ -8,7 +8,7 @@
  */
 ?>
 
-		</div><!-- .container -->
+		</div><!-- .container
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -25,7 +25,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false ) ); ?>
 			</div>
 
-			<div class="site-info">
+			<div class="site-info section group">
 				&copy; <?php echo date( 'Y' ); ?> Auburn Agency Inc. Crop Insurance. Site powered and designed by <a href="http://bcomonline.com">BCom Solutions, LLC.</a>
 			</div><!-- .site-info -->
 
