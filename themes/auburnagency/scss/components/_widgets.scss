@@ -2,6 +2,14 @@
     border-bottom: none;
 }
 
+.info-widgets .widget:last-child {
+    margin-top: 0;
+}
+
+.market-data {
+    margin-top: 1.3em;
+}
+
 .footer-widget-title {
     text-transform: uppercase;
 }

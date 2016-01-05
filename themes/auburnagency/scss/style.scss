@@ -28,7 +28,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 @import "settings/colors";
 @import "settings/fonts";
-//@import "settings/structure";
+@import "settings/structure";
 @import "settings/breakpoints";
 
 /*
@@ -64,8 +64,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 //@import "generic/reset";
 //@import "generic/normalize";
 @import "generic/sanitize";
-//@import "generic/core";
-//@import "generic/align";
+@import "generic/core";
+@import "generic/align";
 
 /*
  * ELEMENTS
@@ -74,9 +74,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Once we have defined element-level styles, all additions and deviations should be implemented using classes.
  *
  */
-//@import "elements/elements";
-//@import "elements/headings";
-//@import "elements/links";
+@import "elements/elements";
+@import "elements/headings";
+@import "elements/links";
 
 /*
  * OBJECTS
