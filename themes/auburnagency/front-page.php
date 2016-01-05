@@ -21,7 +21,7 @@ get_header(); ?>
 
 <section class="slider-area section group">
 	<div class="content-container">
-		SLIDER GOES HERE
+		<?php masterslider(1); ?>
 	</div>
 </section>
 
@@ -46,8 +46,7 @@ get_header(); ?>
 		</div>
 
 		<div class="widget col span_6_of_12">
-			<h2>Weather Data</h2>
-			<?php dynamic_sidebar( 'weather-info' ); ?>
+			<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=40.392826&lon=-95.841699&name=Auburn, NE&color=#719a44&&units=us"> </iframe>
 		</div>
 
 	</div>
