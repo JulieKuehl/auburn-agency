@@ -116,6 +116,9 @@
 
 .footer-links .menu {
     list-style: none;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 
     & li {
         float: left;
@@ -130,4 +133,15 @@
     &:after {
         @include clearfix;
     }
+}
+
+
+.fa-facebook:before {
+    content: "\f09a\00a0\00a0\00a0";
+}
+.fa-twitter:before, {
+    content: "\f099\00a0\00a0\00a0";
+}
+.fa-file-text:before {
+    content: "\f15c\00a0\00a0\00a0";
 }
