@@ -14,14 +14,14 @@ get_header(); ?>
 
 <section class="crop-info-center section group">
 	<div class="content-container">
-		CROP INFO CENTER
+		<h1>CROP INFO CENTER</h1>
 		<?php wp_nav_menu( array( 'theme_location' => 'utility', 'container' => false ) ); ?>
 	</div>
 </section>
 
 <section class="slider-area section group">
 	<div class="content-container">
-		<?php masterslider(1); ?>
+		<?php masterslider(2); ?>
 	</div>
 </section>
 

@@ -134,10 +134,14 @@ function auburnagency_widgets_init() {
 		'name'          => __( 'Twitter Feed', 'auburnagency' ),
 		'id'            => 'twitter-feed',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">
+		                   <div class="fa-stack fa-2x aligncenter">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x"></i>
+							</div><div>',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h1 class="widget-title twitter">FOLLOW <a href="https://twitter.com/aacrop">',
+		'after_title'   => '</a></h1>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'RSS Feeds', 'auburnagency' ),
