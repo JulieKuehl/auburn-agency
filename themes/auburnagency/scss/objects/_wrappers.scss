@@ -23,7 +23,9 @@
 }
 
 .news-feeds {
-    background-color: darken($color-background, 10%);
+    background-color: $light-grey;
+    padding-bottom: 2em;
+    padding-top: 2em;
 }
 
 .twitter-feed,
