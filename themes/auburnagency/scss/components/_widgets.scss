@@ -6,10 +6,43 @@
     margin-top: 0;
 }
 
+// RSS feeds section customization
+.rss-feeds {
+
+    & h1 {
+        font-size: 2em;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+.rss-feeds .widget-title {
+    margin: 0 0 0.5em 0;
+}
+
+.rss-feeds ul li {
+    margin-bottom: 1em;
+}
+
+// Twitter widget customization
+.twitter-feed {
+
+}
+.fa-circle {
+    color: #55acee;
+}
+.fa-twitter {
+    color: white;
+}
+
+// Market Data widget customization
 .market-data {
     margin-top: 1.3em;
 }
 
+// Footer widgets
 .footer-widget-title {
     text-transform: uppercase;
 }
@@ -24,16 +57,16 @@
     text-align: center;
 }
 
-.textwidget a {
+.fat-footer .fa-stack {
+    float: left;
+    margin-right: 0.5em;
+}
+
+.fat-footer .textwidget a {
     color: $white;
     text-decoration: none;
 
     &:hover {
         text-decoration: underline;
     }
-}
-
-.fa-stack {
-    float: left;
-    margin-right: 0.5em;
 }

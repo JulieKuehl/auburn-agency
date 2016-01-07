@@ -13,13 +13,13 @@
     border-bottom: 3px solid $color-primary;
  }
 
-nav {
-
-}
-
 .site-content {
     background-color: $color-background;
     //background-image: url("/wp-content/themes/auburnagency/images/exclusive_paper.png");
+}
+
+.info-widgets {
+    border-top: 3px solid $color-primary;
 }
 
 .news-feeds {
@@ -29,6 +29,12 @@ nav {
 .twitter-feed,
 .rss-feeds {
     background-color: $white;
+    padding: 1em;
+}
+
+.rss-feeds {
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .site-footer {
