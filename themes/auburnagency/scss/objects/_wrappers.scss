@@ -1,3 +1,7 @@
+/**
+ * Header wrappers
+ */
+
 .site-header:after,
 .site-content:after,
 .site-footer:before,
@@ -13,10 +17,56 @@
     border-bottom: 3px solid $color-primary;
  }
 
+/**
+ * Page wrappers
+ */
+
+.page-title {
+    background-color: $color-primary;
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.entry-title {
+    margin: 0;
+}
+
+#main {
+    background-color: darken($white, 10%);
+    background-image: url("/wp-content/themes/auburnagency/images/bg-crop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.breadcrumbs {
+    padding-top: 0.5em;
+}
+
+#primary,
+#secondary {
+    background-color: $white;
+    padding: 0.5em;
+}
+
+.content-area,
+.widget-area {
+    margin-top: 1em;
+}
+
 .site-content {
     background-color: $color-background;
     //background-image: url("/wp-content/themes/auburnagency/images/exclusive_paper.png");
 }
+
+/**
+ * Home page wrappers
+ */
 
 .slider-area {
     border-top: 3px solid $color-primary;
@@ -45,6 +95,10 @@
     padding-left: 2em;
     padding-right: 2em;
 }
+
+/**
+ * Footer wrappers
+ */
 
 .site-footer {
  	background-color: $color-primary;
