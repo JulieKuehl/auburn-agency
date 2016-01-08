@@ -12,31 +12,54 @@
 
 get_header(); ?>
 
-<main id="main" class="content-container" role="main">
+<section class="page-title">
+	<header class="entry-header container">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+</section>
 
-	<div id="primary" class="content-area">
 
-		<section class="main-area">
-			<div class="container">
+<main id="main" class="" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+	<section class="main-area content-container">
 
-					<?php
-						// If comments are open or we have at least one comment, load up the comment template
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
-
+			<div class="breadcrumbs">
+				<?php if ( function_exists('yoast_breadcrumb') )
+				{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 			</div>
-		</section>
-	</div>
 
-	<?php get_sidebar(); ?>
+			<div id="primary" class="content-area">
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . __( 'Pages:', 'auburnagency' ),
+							'after'  => '</div>',
+							'pagelink' => '<span>%</span>',
+						) );
+						?>
+					</div><!-- .entry-content -->
+
+					<footer class="entry-footer">
+						<?php edit_post_link( __( 'Edit', 'auburnagency' ), '<span class="edit-link">', '</span>' ); ?>
+					</footer><!-- .entry-footer -->
+
+				</article><!-- #post-## -->
+
+			</div><!-- #primary -->
+
+		<?php endwhile; // end of the loop. ?>
+
+
+
+		<?php get_sidebar(); ?>
+
+	</section><!-- .main-area -->
 
 </main><!-- #main -->
 
