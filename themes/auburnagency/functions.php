@@ -272,3 +272,15 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require_once('wp-updates-theme.php');
 new WPUpdatesThemeUpdater_1511( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
+
+/**
+ * Add search icon to nav menu
+ */
+function add_search_form_to_menu($items, $args) {
+	// If this isn't the main navbar menu, do nothing
+	if( !($args->theme_location == 'primary') ) // display the search box to the secondary menu, just replacing 'main' with 'secondary'
+		return $items;
+	// On main menu: put styling around search and append it to the menu items
+	return $items . '<li class="menu-item my-nav-menu-search">' . get_search_form(false) . '</li>';
+}
+add_filter('wp_nav_menu_items', 'add_search_form_to_menu', 10, 2);

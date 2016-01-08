@@ -7,13 +7,13 @@
 // Courtesy http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu
 
 .main-navigation .menu li {
-    background-color: $color-accent;
+    //background-color: $color-accent;
     margin-left: -10px;
     padding: 0.5em;
     position: relative;
-    -webkit-transform: skew(-30deg);
-    -moz-transform: skew(-30deg);
-    -o-transform: skew(-30deg);
+    //-webkit-transform: skew(-30deg);
+    //-moz-transform: skew(-30deg);
+    //-o-transform: skew(-30deg);
 
     &:after {
         //background: $color-accent;
@@ -31,15 +31,19 @@
     }
 }
 .main-navigation .menu li a {
-    color: $white;
+    //color: $white;
 
-    -webkit-transform: skew(0deg);
-    -moz-transform: skew(0deg);
-    -o-transform: skew(0deg);
+    //-webkit-transform: skew(0deg);
+    //-moz-transform: skew(0deg);
+    //-o-transform: skew(0deg);
 
     &:hover {
         color: $color-secondary;
     }
+}
+
+.bop-nav-search input[type="submit"]{
+    display: none;
 }
 
 // MOBILE MENU

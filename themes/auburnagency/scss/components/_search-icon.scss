@@ -1,0 +1,63 @@
+/**
+ * Courtesy http://presscustomizr.com/snippet/adding-an-html5-search-form-in-your-wordpress-menu/
+ * and
+ * http://www.wpbeginner.com/wp-themes/how-to-add-a-search-toggle-effect-in-wordpress/
+ *
+ */
+
+#menu-main-menu {
+    float: left;
+}
+
+.site-header .search-box,
+.main-navigation .search-box {
+    //float: right;
+}
+
+.site-header .search-form,
+.main-navigation .search-form {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 2em;
+    margin-top: 5px;
+    width: 35px;
+}
+
+.site-header .search-field,
+.main-navigation .search-field {
+    background-color: transparent;
+    background-image: url(images/search-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    //height: 37px;
+    margin: 3px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    display: inline-block;
+    float: right;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition:         width 400ms ease, background 400ms ease;
+    width: 0;
+    z-index: 9999;
+}
+
+.site-header .search-field:focus,
+.main-navigation .search-field:focus {
+    background-color: #fff;
+    border: 2px solid #c3c0ab;
+    cursor: text;
+    outline: 0;
+    width: 230px;
+    z-index: 9999;
+}
+.search-form
+.search-submit {
+    display: none;
+}
+
+li.menu-item.my-nav-menu-search {
+    margin-left: 0 !important;
+}
