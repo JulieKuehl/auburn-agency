@@ -10,3 +10,4 @@ plugins/master-slider
 cache
 plugins/wordpress-seo
 plugins/advanced-custom-fields
+plugins/post-types-order
