@@ -284,3 +284,76 @@ function add_search_form_to_menu($items, $args) {
 	return $items . '<li class="menu-item my-nav-menu-search">' . get_search_form(false) . '</li>';
 }
 add_filter('wp_nav_menu_items', 'add_search_form_to_menu', 10, 2);
+
+/*
+ * Move Yoast to bottom
+ */
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+function yoasttobottom() {
+	return 'low';
+}
+
+
+/**
+ * Register Custom Post Type for Crop Information Center Tabs *
+ *
+ */
+if ( ! function_exists('crop_info_center_tabs') ) {
+
+// Register Custom Post Type
+	function crop_info_center_tabs() {
+
+		$labels = array(
+			'name'                  => _x( 'Crop Info Center Tabs', 'Post Type General Name', 'auburnagency' ),
+			'singular_name'         => _x( 'Crop Info Center Tab', 'Post Type Singular Name', 'auburnagency' ),
+			'menu_name'             => __( 'Crop Info Tabs', 'auburnagency' ),
+			'name_admin_bar'        => __( 'Crop Info Tabs', 'auburnagency' ),
+			'archives'              => __( 'Item Archives', 'auburnagency' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'auburnagency' ),
+			'all_items'             => __( 'All Items', 'auburnagency' ),
+			'add_new_item'          => __( 'Add New Item', 'auburnagency' ),
+			'add_new'               => __( 'Add New', 'auburnagency' ),
+			'new_item'              => __( 'New Item', 'auburnagency' ),
+			'edit_item'             => __( 'Edit Item', 'auburnagency' ),
+			'update_item'           => __( 'Update Item', 'auburnagency' ),
+			'view_item'             => __( 'View Item', 'auburnagency' ),
+			'search_items'          => __( 'Search Item', 'auburnagency' ),
+			'not_found'             => __( 'Not found', 'auburnagency' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'auburnagency' ),
+			'featured_image'        => __( 'Featured Image', 'auburnagency' ),
+			'set_featured_image'    => __( 'Set featured image', 'auburnagency' ),
+			'remove_featured_image' => __( 'Remove featured image', 'auburnagency' ),
+			'use_featured_image'    => __( 'Use as featured image', 'auburnagency' ),
+			'insert_into_item'      => __( 'Insert into item', 'auburnagency' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'auburnagency' ),
+			'items_list'            => __( 'Items list', 'auburnagency' ),
+			'items_list_navigation' => __( 'Items list navigation', 'auburnagency' ),
+			'filter_items_list'     => __( 'Filter items list', 'auburnagency' ),
+		);
+		$args = array(
+			'label'                 => __( 'Crop Info Center Tab', 'auburnagency' ),
+			'description'           => __( 'Crop Info Center Tabs', 'auburnagency' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'thumbnail', 'revisions', ),
+			'taxonomies'            => array( 'category', 'post_tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 20,
+			'menu_icon'             => 'dashicons-excerpt-view',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'crop_info_tabs', $args );
+
+	}
+	add_action( 'init', 'crop_info_center_tabs', 0 );
+
+}

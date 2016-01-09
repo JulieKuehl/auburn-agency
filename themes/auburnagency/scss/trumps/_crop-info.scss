@@ -1,0 +1,37 @@
+.crop-info-center h1 {
+    color: $color-text;
+    font-size: 1.9em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    border-bottom: 3px solid $color-primary;
+    line-height: 0.1em;
+    margin-top: 2em;
+}
+
+span.title-block {
+    background: $white;
+    padding: 0 10px;
+}
+
+.crop-info-center h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 1em;
+    color: lighten($color-text, 20%);
+    text-align: center;
+}
+
+.crop-info-center-menu {
+    background-color: $color-primary;
+}
+
+#menu-utility-menu {
+    
+}
+
+.crop-info-center .menu li a {
+    color: $white;
+    text-decoration: none;
+}

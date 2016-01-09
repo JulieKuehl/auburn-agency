@@ -13,10 +13,214 @@
 get_header(); ?>
 
 <section class="crop-info-center section group">
-	<div class="content-container">
-		<h1>CROP INFO CENTER</h1>
-		<?php wp_nav_menu( array( 'theme_location' => 'utility', 'container' => false ) ); ?>
-	</div>
+
+	<span class="title-block"><h1>Crop Information Center</h1></span>
+	<span class="title-block-subtitle"><h2>Select a stage below</h2></span>
+
+	<div class="crop-info-center-menu">
+		<div class="content-container">
+
+			<!-- Begin tabbed content -->
+			<div id="tabs" class="ui-tabs section group">
+
+				<!-- Tab navigation menu -->
+				<ul class="tabs ui-tabs-nav">
+					<li><a href="#tab-planting">Planting</a></li>
+					<li><a href="#tab-emergence">Emergence</a></li>
+					<li><a href="#tab-vegetative">Vegetative</a></li>
+					<li><a href="#tab-reproductive">Reproductive</a></li>
+					<li><a href="#tab-grain-fill">Grain Fill</a></li>
+					<li><a href="#tab-harvest">Harvest</a></li>
+					<li><a href="#tab-winter">Winter</a></li>
+				</ul>
+
+			</div><!-- .tabs -->
+
+		</div><!-- .content-container -->
+	</div><!-- .crop-info-center-menu -->
+
+				<div class="content-container">
+				<!-- Planting tab -->
+				<div id="tab-planting" class="ui-tabs-panel col span_12_of_12">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+						<?php echo the_field( 'crop_info_planting_text' ); ?>
+
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-planting -->
+
+				<!-- Emergence tab -->
+				<div id="tab-emergence" class="ui-tabs-panel">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+							<?php echo the_field( 'crop_info_emergence_text' ); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-emergence -->
+
+				<!-- Vegetative tab -->
+				<div id="tab-vegetative" class="ui-tabs-panel">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+							<?php echo the_field( 'crop_info_vegetative_text' ); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-vegetative -->
+
+				<!-- Reproductive tab -->
+				<div id="tab-reproductive" class="ui-tabs-panel">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+							<?php echo the_field( 'crop_info_reproductive_text' ); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-reproductive -->
+
+				<!-- Grain Fill tab -->
+				<div id="tab-grain-fill" class="ui-tabs-panel">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+							<?php echo the_field( 'crop_info_grain_fill_text' ); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-grain-fill -->
+
+				<!-- Harvest tab -->
+				<div id="tab-harvest" class="ui-tabs-panel">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+							<?php echo the_field( 'crop_info_harvest_text' ); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-harvest -->
+
+				<!-- Winter tab -->
+				<div id="tab-winter" class="ui-tabs-panel">
+
+					<?php
+					$args = array(
+						'post_type'       => 'crop_info_tabs',
+						'nopaging'        => true,
+					);
+
+					$cropinfo = new WP_Query( $args );
+					?>
+
+					<?php
+					if ( $cropinfo->have_posts() ) :
+						while ( $cropinfo->have_posts() ) :
+							$cropinfo->the_post(); ?>
+
+							<?php echo the_field( 'crop_info_winter_text' ); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</div><!-- .tab-winter -->
+
+					</div><!-- .content-container -->
+
+			</div><!-- .tabs -->
+		</div><!-- .content-container -->
+	</div><!-- .crop-info-center-menu -->
+
 </section>
 
 <section class="slider-area section group">

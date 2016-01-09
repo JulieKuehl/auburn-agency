@@ -1,0 +1,65 @@
+.ui-tabs-nav {
+    list-style: none;
+}
+
+.ui-tabs-nav li {
+    float: left;
+    padding: 0.5em 1em;
+
+    &:first-of-type {
+        padding-left: 0;
+    }
+    &:last-of-type {
+        padding-right: 0;
+    }
+
+    & a {
+        color: $white;
+    }
+}
+
+.ui-tabs-panel {
+    background-color: $white;
+}
+
+
+
+//.tab-container,
+.ui-tabs {
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul.tabs,
+.ui-tabs-nav {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.ui-tabs-active a {
+    color: $color-primary;
+    font-weight: 700;
+}
+
+ul.tabs li,
+.ui-tabs-anchor {
+    background: none;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ui-tabs-panel {
+    display: none;
+    padding: 1em;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+.ui-state-default:before,
+.ui-state-default:after {
+    content:  "|";
+}

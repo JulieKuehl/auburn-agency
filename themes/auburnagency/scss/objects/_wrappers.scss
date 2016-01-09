@@ -61,12 +61,15 @@
 
 .site-content {
     background-color: $color-background;
-    //background-image: url("/wp-content/themes/auburnagency/images/exclusive_paper.png");
 }
 
 /**
  * Home page wrappers
  */
+
+.crop-info-center-menu {
+    background-color: $color-primary;
+}
 
 .slider-area {
     border-top: 3px solid $color-primary;
