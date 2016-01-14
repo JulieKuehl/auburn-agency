@@ -204,41 +204,58 @@ function auburnagency_widgets_init() {
 endif; // auburnagency_widgets_init
 add_action( 'widgets_init', 'auburnagency_widgets_init' );
 
-if ( ! function_exists( 'auburnagency_scripts' ) ) :
+//if ( ! function_exists( 'auburnagency_scripts' ) ) :
 /**
  * Enqueue scripts and styles.
  */
 function auburnagency_scripts() {
 	wp_enqueue_style( 'auburnagency-style', get_stylesheet_uri() );
 
-	// Front-end scripts
-	if ( !is_admin() ) {
+	if ( ! is_admin() ) {
 
-	  // Load minified scripts if debug mode is off
-	  if ( WP_DEBUG === true ) {
-	    $suffix = '';
-	  } else {
-	    $suffix = '.min';
-	  }
+		// Load theme-specific JavaScript with versioning based on last modified time; http://www.ericmmartin.com/5-tips-for-using-jquery-with-wordpress/
+		wp_register_script(
+			'auburnagency-js-core',
+			get_stylesheet_directory_uri() . '/js/core.js',
+			array( 'jquery' ),
+			filemtime( get_template_directory() . '/js/core.js' ),
+			true
+		);
+		wp_enqueue_script( 'auburnagency-js-core' );
 
-	  // Load theme-specific JavaScript with versioning based on last modified time; http://www.ericmmartin.com/5-tips-for-using-jquery-with-wordpress/
-	  wp_enqueue_script( 'auburnagency-js-core', get_stylesheet_directory_uri() . '/js/core' . $suffix . '.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/core' . $suffix . '.js' ), true );
+		// Load theme-specific JavaScript
+//		wp_register_script(
+//			'auburnagency-js-extras',
+//			get_stylesheet_directory_uri() . '/js/extras.js',
+//			array( 'jquery' ),
+//			filemtime( get_template_directory() . '/js/extras.js' ),
+//			true
+//		);
+//		wp_enqueue_script( 'auburnagency-js-extras' );
 
-	  // Conditionally load another script
-	  // if ( is_singular() ) {
-	  //   wp_enqueue_script( 'my-theme-extras', get_stylesheet_directory_uri() . '/js/extras' . $suffix . '.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/extras' . $suffix . '.js' ), true );
-	  // }
-	}
+		// Load jQuery for tabbed displays
+		wp_register_script(
+			'auburnagency-js-tabs',
+			get_stylesheet_directory_uri() . '/js/tabs.js',
+			array( 'jquery' )
+		);
+		wp_enqueue_script( 'jquery-ui-tabs' );
+		wp_enqueue_script( 'auburnagency-js-tabs' );
 
-	// wp_enqueue_script( 'auburnagency-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-	// wp_enqueue_script( 'auburnagency-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+//		// Load JavaScript for responsive tabs
+//		wp_register_script(
+//			'auburnagency-js-responsive-tabs',
+//			get_stylesheet_directory_uri() . '/js/jquery.responsiveTabs.js',
+//			array( 'jquery' )
+//		);
+//		wp_enqueue_script( 'auburnagency-js-responsive-tabs' );
+//
+//		// Load styles for responsive tabs
+//		wp_enqueue_style( 'auburnagency-js-responsive-tabs-style', get_stylesheet_directory_uri() . 'css/responsive-tabs.css' );
+//		wp_enqueue_style( 'auburnagency-js-responsive-tabs-basic-style', get_stylesheet_directory_uri() . 'css/style.css' );
 	}
 }
-endif; // auburnagency_scripts
+
 add_action( 'wp_enqueue_scripts', 'auburnagency_scripts' );
 
 

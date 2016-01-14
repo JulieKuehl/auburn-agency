@@ -20,18 +20,6 @@ span.title-block {
     font-style: italic;
     font-size: 1em;
     color: lighten($color-text, 20%);
+    line-height: 3;
     text-align: center;
-}
-
-.crop-info-center-menu {
-    background-color: $color-primary;
-}
-
-#menu-utility-menu {
-    
-}
-
-.crop-info-center .menu li a {
-    color: $white;
-    text-decoration: none;
 }

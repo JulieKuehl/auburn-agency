@@ -67,8 +67,13 @@
  * Home page wrappers
  */
 
-.crop-info-center-menu {
+.crop-info-center-icons {
+    height: 72px;
+}
+
+.crop-info-center-menu-background {
     background-color: $color-primary;
+    height: 2.5em;
 }
 
 .slider-area {
