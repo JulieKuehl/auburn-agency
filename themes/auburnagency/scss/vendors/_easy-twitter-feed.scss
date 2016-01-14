@@ -1,0 +1,40 @@
+// Twitter widget customization
+.twitter-feed {
+
+}
+
+// icon stack
+.fa-circle {
+    color: #55acee;
+}
+.fa-twitter {
+    color: white;
+}
+
+//.kebo_twitter_feed_widget ul:before {
+//    //content: "Follow @aacrop";
+//}
+//
+//.kebo-tweets .ktweet .kdate {
+//    float: none !important;
+//}
+//.kebo-tweets .ktweet .kmeta,
+//.kebo-tweets .ktweet .ktext,
+//.kebo-tweets .ktweet .kfooter {
+//    text-align: center !important;
+//}
+//.kaccount {
+//    display: none !important;
+//}
+
+.widget-title.twitter {
+    text-align: center;
+
+    a {
+        color: $color-primary;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
