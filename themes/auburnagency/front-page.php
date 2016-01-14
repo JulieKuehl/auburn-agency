@@ -17,7 +17,6 @@ get_header(); ?>
 	<h1><span class="title-block">Crop Information Center</span></h1>
 	<h2><span class="title-block-subtitle">Select a stage below</span></h2>
 
-	<div class="crop-info-center-icons"></div>
 	<div class="crop-info-center-menu-background"></div>
 
 	<div class="crop-info-center-menu">
@@ -28,13 +27,63 @@ get_header(); ?>
 
 				<!-- Tab navigation menu -->
 				<ul class="tabs ui-tabs-nav">
-					<li><a href="#tab-planting">Planting</a></li>
-					<li><a href="#tab-emergence">Emergence</a></li>
-					<li><a href="#tab-vegetative">Vegetative</a></li>
-					<li><a href="#tab-reproductive">Reproductive</a></li>
-					<li><a href="#tab-grain-fill">Grain Fill</a></li>
-					<li><a href="#tab-harvest">Harvest</a></li>
-					<li><a href="#tab-winter">Winter</a></li>
+
+					<li>
+						<a href="#tab-planting" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-planting.png">
+							<br />
+							<br />
+							Planting
+						</a>
+					</li>
+					<li>
+						<a href="#tab-emergence" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-emergence.png">
+							<br />
+							<br />
+							Emergence
+						</a>
+					</li>
+					<li>
+						<a href="#tab-vegetative" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-vegetative.png">
+							<br />
+							<br />
+							Vegetative
+						</a>
+					</li>
+					<li>
+						<a href="#tab-reproductive" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-reproductive.png">
+							<br />
+							<br />
+							Reproductive
+						</a>
+					</li>
+					<li>
+						<a href="#tab-grain-fill" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-grain-fill.png">
+							<br />
+							<br />
+							Grain Fill
+						</a>
+					</li>
+					<li>
+						<a href="#tab-harvest" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-harvest.png">
+							<br />
+							<br />
+							Harvest
+						</a>
+					</li>
+					<li>
+						<a href="#tab-winter" class="crop-stage-graphic">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-winter.png">
+							<br />
+							<br />
+							Winter
+						</a>
+					</li>
 				</ul>
 
 <!--			</div><!-- .tabs -->
@@ -62,7 +111,14 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-					<?php echo the_field( 'crop_info_planting_text' ); ?>
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_planting_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_planting_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_planting_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_planting_button_text' ); ?></button></a>
+						</div>
 
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -87,7 +143,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<?php echo the_field( 'crop_info_emergence_text' ); ?>
+
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_emergence_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_emergence_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_emergence_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_emergence_button_text' ); ?></button></a>
+						</div>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -112,7 +176,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<?php echo the_field( 'crop_info_vegetative_text' ); ?>
+
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_vegetative_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_vegetative_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_vegetative_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_vegetative_button_text' ); ?></button></a>
+						</div>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -137,7 +209,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<?php echo the_field( 'crop_info_reproductive_text' ); ?>
+
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_reproductive_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_reproductive_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_reproductive_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_reproductive_button_text' ); ?></button></a>
+						</div>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -162,7 +242,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<?php echo the_field( 'crop_info_grain_fill_text' ); ?>
+
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_grain_fill_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_grain_fill_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_grain_fill_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_grain_fill_button_text' ); ?></button></a>
+						</div>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -187,7 +275,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<?php echo the_field( 'crop_info_harvest_text' ); ?>
+
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_harvest_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_harvest_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_harvest_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_harvest_button_text' ); ?></button></a>
+						</div>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -212,7 +308,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<?php echo the_field( 'crop_info_winter_text' ); ?>
+
+						<div class="col span_6_of_12">
+							<?php echo the_field( 'crop_info_winter_text' ); ?>
+						</div>
+
+						<div class="col span_6_of_12">
+							<img src="<?php echo the_field( 'crop_info_winter_picture' ); ?>" />
+							<a href="<?php the_field( 'crop_info_winter_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_winter_button_text' ); ?></button></a>
+						</div>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>

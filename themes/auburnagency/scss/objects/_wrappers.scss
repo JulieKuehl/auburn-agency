@@ -74,6 +74,12 @@
 .crop-info-center-menu-background {
     background-color: $color-primary;
     height: 2.5em;
+    position: relative;
+    top: 190px;
+}
+
+.crop-info-center-menu {
+    margin-bottom: 3em;
 }
 
 .slider-area {

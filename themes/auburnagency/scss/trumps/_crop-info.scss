@@ -23,3 +23,31 @@ span.title-block {
     line-height: 3;
     text-align: center;
 }
+
+div#tab-planting:before {
+    backgroun-image: url("/images/corn-stage-planting.png");
+}
+
+.tab-panel-button {
+    float: right;
+    background-color: $color-secondary;
+    border: none;
+    color: $white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+
+    &:hover {
+        background-color: $color-primary;
+        color: $white;
+    }
+}
+
+.crop-stage-graphic {
+    width: 108px;
+}
