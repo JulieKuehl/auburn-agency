@@ -24,10 +24,6 @@ span.title-block {
     text-align: center;
 }
 
-div#tab-planting:before {
-    backgroun-image: url("/images/corn-stage-planting.png");
-}
-
 .tab-panel-button {
     float: right;
     background-color: $color-secondary;
@@ -50,4 +46,32 @@ div#tab-planting:before {
 
 .crop-stage-graphic {
     width: 108px;
+}
+
+.crop-info-planting-months {
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-top: 0;
+    //background-color: $color-primary;
+    position: relative;
+    top: -90px;
+    background-image: url("../auburnagency/images/crop-info-months-tab.jpg");
+    background-position: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    z-index: 1;
+
+    &:after {
+        @include clearfix;
+    }
+}
+
+.crop-info-planting-months span {
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    padding-left: 1em;
+    padding-right: 1em;
 }

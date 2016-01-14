@@ -29,6 +29,7 @@ get_header(); ?>
 				<ul class="tabs ui-tabs-nav">
 
 					<li>
+						<div class=""><?php echo the_field( 'crop_info_planting_months' ); ?></div>
 						<a href="#tab-planting" class="crop-stage-graphic">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corn-stage-planting.png">
 							<br />
@@ -95,7 +96,7 @@ get_header(); ?>
 <!--		<div class="content-container">-->
 
 			<!-- Planting tab -->
-			<div id="tab-planting" class="ui-tabs-panel">
+			<div id="tab-planting" class="ui-tabs-panel section group">
 
 				<?php
 				$args = array(
@@ -111,11 +112,15 @@ get_header(); ?>
 					while ( $cropinfo->have_posts() ) :
 						$cropinfo->the_post(); ?>
 
-						<div class="col span_6_of_12">
+						<div class="crop-info-planting-months">
+							<span>Planting, <?php echo the_field( 'crop_info_planting_months' ); ?></span>
+						</div>
+
+						<div class="col span_6_of_12 col-left">
 							<?php echo the_field( 'crop_info_planting_text' ); ?>
 						</div>
 
-						<div class="col span_6_of_12">
+						<div class="col span_6_of_12 col-right">
 							<img src="<?php echo the_field( 'crop_info_planting_picture' ); ?>" />
 							<a href="<?php the_field( 'crop_info_planting_button_link' ); ?>"><button class="tab-panel-button"><?php echo the_field( 'crop_info_planting_button_text' ); ?></button></a>
 						</div>
