@@ -1,0 +1,19 @@
+#menu-sidebar-menu li {
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $color-accent;
+    color: $white;
+    height: 3em;
+    line-height: 2;
+    margin-bottom: 0.7em;
+    padding: 0.5em;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+#menu-sidebar-menu .current-menu-item {
+    background-color: $color-secondary;
+}
