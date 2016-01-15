@@ -30,7 +30,7 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="container">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'link_before' => '<span>', 'link_after' => '</span>', 'container' => false ) ); ?>
 				</div>
 			</nav><!-- .main-navigation -->
 

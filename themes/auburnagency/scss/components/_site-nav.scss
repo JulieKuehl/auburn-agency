@@ -8,13 +8,14 @@
 
 .main-navigation .menu .menu-item {
     background-color: $color-accent;
+    margin-left: 10px;
     padding: 0.5em 1em;
     text-transform: uppercase;
 
     // courtesy http://stackoverflow.com/questions/11418977/parallelogram-navigation-background-with-css
     display: inline-block;
     text-decoration:none;
-    padding:4px 10px;
+    padding: 10px 30px;
     transform: skewX(-50deg);
     -o-transform: skewX(-50deg);
     -moz-transform: skewX(-50deg);
@@ -27,7 +28,6 @@
         -moz-transform: skewX(50deg);
         -webkit-transform: skewX(50deg);
     }
-
 
     &:hover {
         background-color: $color-secondary;
@@ -43,9 +43,31 @@
     text-decoration: none;
 }
 
-.bop-nav-search input[type="submit"]{
-    display: none;
+.menu-item.my-nav-menu-search,
+.main-navigation .menu-item:last-of-type {
+    padding: 7px 10px 10px;
+    max-height: 44px;
+    margin-left: 10px !important;
 }
+
+.main-navigation .menu .menu-item span {
+    &:hover {
+        color: $white;
+    }
+
+    &.screen-reader-text {
+        display: none;
+    }
+}
+
+.main-navigation .menu .menu-item label {
+    display: inline-block;
+    transform: skewX(50deg);
+    -o-transform: skewX(50deg);
+    -moz-transform: skewX(50deg);
+    -webkit-transform: skewX(50deg);
+}
+
 
 // MOBILE MENU
 
