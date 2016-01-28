@@ -9,13 +9,13 @@
     float: left;
 }
 
-.site-header .search-box,
-.main-navigation .search-box {
+.site-header .my-nav-menu-search .search-box,
+.main-navigation .my-nav-menu-search .search-box {
     //float: right;
 }
 
-.site-header .search-form,
-.main-navigation .search-form {
+.site-header .my-nav-menu-search .search-form,
+.main-navigation .my-nav-menu-search .search-form {
     display: inline-block;
     margin-bottom: 0;
     margin-left: 2em;
@@ -23,8 +23,8 @@
     width: 35px;
 }
 
-.site-header .search-field,
-.main-navigation .search-field {
+.site-header .my-nav-menu-search .search-field,
+.main-navigation .my-nav-menu-search .search-field {
     background-color: transparent;
     background-image: url(images/search-icon.png);
     background-position: 5px center;
@@ -44,8 +44,8 @@
     z-index: 9999;
 }
 
-.site-header .search-field:focus,
-.main-navigation .search-field:focus {
+.site-header .my-nav-menu-search .search-field:focus,
+.main-navigation .my-nav-menu-search .search-field:focus {
     background-color: #fff;
     border: 2px solid #c3c0ab;
     cursor: text;
@@ -53,11 +53,28 @@
     width: 230px;
     z-index: 9999;
 }
-.search-form
-.search-submit {
+
+.my-nav-menu-search .search-form .search-submit {
     display: none;
 }
 
 li.menu-item.my-nav-menu-search {
     margin-left: 0 !important;
+}
+
+
+// search form button (on search page when there's no results)
+.search-form label input[type=search] {
+    border: 1px solid $color-primary;
+    border-right: none;
+}
+
+input[type="submit"] {
+    background-color: $color-primary;
+    color: $white;
+    border: none;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
 }
