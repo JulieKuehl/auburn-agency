@@ -1,19 +1,44 @@
-#menu-sidebar-menu li {
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: $color-accent;
-    color: $white;
-    height: 3em;
-    line-height: 2;
-    margin-bottom: 0.7em;
-    padding: 0.5em 1em;
-
-    a {
-        color: $white;
+// Top level menu items
+#menu-sidebar-menu {
+    li {
+        text-transform: uppercase;
         text-decoration: none;
+        background-color: $color-accent;
+        color: $white;
+        line-height: 1;
+        margin-bottom: 0.7em;
+        padding: 1em;
+        position: relative;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    & .current-menu-item {
+        background-color: $color-primary;
+        color: $color-secondary;
+        line-height: 1;
     }
 }
 
-#menu-sidebar-menu .current-menu-item {
-    background-color: $color-secondary;
+// Sub-menus
+#menu-sidebar-menu .sub-menu {
+    display: none;
+
+    & li:hover {
+        background-color: $color-secondary;
+    }
+    & li:first-of-type {
+        margin-top: 0.5em;
+    }
+}
+
+#menu-sidebar-menu > .current-menu-item .sub-menu {
+    display: block;
+}
+
+#menu-sidebar-menu > .current-menu-parent .sub-menu {
+    display: block;
 }

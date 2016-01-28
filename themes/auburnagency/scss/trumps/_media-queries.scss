@@ -82,10 +82,13 @@
         left: 0;
         z-index: 1;
         width: 100%;
-        height: 120px;
+        height: 90px;
         padding-top: 0;
         padding-bottom: 0;
         background-color: #fff
+    }
+    .site-branding img {
+        max-width: 80%;
     }
     .admin-bar .site-header {
         top: 46px
@@ -207,13 +210,20 @@
         margin-bottom: .9375rem;
         padding-bottom: 0
     }
+    .default-theme.wp-posts-carousel .wp-posts-carousel-container {
+        height: 12em;
+    }
     .site-footer {
         padding-top: 1.875rem;
         padding-bottom: 1.875rem
     }
-    .fat-footer .widget_sp_image {
-        text-align: center;
+    .fat-footer .footer-logo {
         margin-bottom: 3em;
+    }
+    .footer-logo .widget_sp_image,
+    .footer-logo .textwidget {
+        text-align: center;
+        float: none;
     }
     .footer-block {
         display: table;

@@ -15,6 +15,7 @@
     padding-top: 0.5em;
     padding-bottom: 0;
     border-bottom: 3px solid $color-primary;
+    z-index: 9999;
  }
 
 /**
@@ -51,12 +52,12 @@
 #primary,
 #secondary {
     background-color: $white;
-    padding: 0.5em;
 }
 
 .content-area,
 .widget-area {
     margin-top: 1em;
+    padding: 1.5em;
 }
 
 .site-content {
@@ -66,6 +67,10 @@
 /**
  * Home page wrappers
  */
+
+.message-center {
+    height: 210px;
+}
 
 .crop-info-center-icons {
     height: 72px;

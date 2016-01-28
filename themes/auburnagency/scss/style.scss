@@ -124,6 +124,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "vendors/hungry-feed";
 @import "vendors/master-slider";
 //@import "vendors/responsive-tabs";
+@import "vendors/wp-posts-carousel";
+@import "vendors/accordion-shortcodes";
 
 /*
  * TRUMPS
@@ -137,4 +139,4 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 //@import "trumps/utilities";
 @import "trumps/media-queries";
 @import "trumps/crop-info";
-//@import "trumps/shame";
+@import "trumps/shame";
