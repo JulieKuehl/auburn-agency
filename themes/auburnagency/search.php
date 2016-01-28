@@ -7,39 +7,54 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!--<section id="primary" class="content-area">-->
+	<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'auburnagency' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+			<section class="page-title">
+				<header class="entry-header container">
+					<h1 class="entry-title">Search</h1>
+				</header><!-- .entry-header -->
+			</section>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<section class="content-container">
+			<div class="breadcrumbs">
+				<a href="<?php bloginfo( 'url' ); ?>">Home</a> / Search
+			</div><!-- .breadcrumbs -->
+		</section>
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
+		<section class="main-area content-container">
 
-			<?php endwhile; ?>
+			<div id="primary" class="content-area">
 
-			<?php forward_posts_navigation(); ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php else : ?>
+					<?php
+					/**
+					 * Run the loop for the search to output the results.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-search.php and that will be used instead.
+					 */
+					get_template_part( 'content', 'search' );
+					?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+				<?php endwhile; ?>
 
-		<?php endif; ?>
+					<?php forward_posts_navigation(); ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				<?php else : ?>
 
-<?php get_sidebar(); ?>
+					<?php get_template_part( 'content', 'none' ); ?>
+
+				<?php endif; ?>
+
+			</div><!-- #primary -->
+
+			<?php get_sidebar(); ?>
+
+		</section><!-- .main-area -->
+	</main><!-- #main -->
+
 <?php get_footer(); ?>
