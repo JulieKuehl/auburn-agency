@@ -1,6 +1,7 @@
 // Top level menu items
 #menu-sidebar-menu {
-    li {
+    li,
+    li.menu-item-has-children {
         text-transform: uppercase;
         text-decoration: none;
         background-color: $color-accent;
