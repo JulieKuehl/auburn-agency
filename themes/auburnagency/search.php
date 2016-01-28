@@ -28,6 +28,10 @@ get_header(); ?>
 
 			<div id="primary" class="content-area">
 
+				<h2 class=""><?php printf( __( 'You searched for: %s', 'auburnagency' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+				<br />
+				<hr />
+
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
