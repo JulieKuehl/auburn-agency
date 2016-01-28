@@ -120,9 +120,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 //@import "vendors/gravity-forms";
 //@import "vendors/events-calendar";
-@import "vendors/kebo-twitter";
+@import "vendors/easy-twitter-feed";
 @import "vendors/hungry-feed";
 @import "vendors/master-slider";
+//@import "vendors/responsive-tabs";
 
 /*
  * TRUMPS
@@ -134,5 +135,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 @import "trumps/clearfix";
 //@import "trumps/utilities";
-//@import "trumps/shame";
+@import "trumps/media-queries";
 @import "trumps/crop-info";
+//@import "trumps/shame";

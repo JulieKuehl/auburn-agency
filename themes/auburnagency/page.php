@@ -12,14 +12,13 @@
 
 get_header(); ?>
 
-<section class="page-title">
-	<header class="entry-header container">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-</section>
-
-
 <main id="main" class="" role="main">
+
+	<section class="page-title">
+		<header class="entry-header container">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+	</section>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 

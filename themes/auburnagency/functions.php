@@ -86,6 +86,7 @@ function auburnagency_setup() {
 		'primary' => __( 'Primary Menu', 'auburnagency' ),
 		'utility' => __( 'Utility Menu', 'auburnagency' ),
 		'footer' => __( 'Footer Links', 'auburnagency' ),
+		'responsive' => __( 'Responsive Menu', 'auburnagency'),
 	) );
 
 	/*
@@ -147,16 +148,16 @@ function auburnagency_widgets_init() {
 		'name'          => __( 'RSS Feeds', 'auburnagency' ),
 		'id'            => 'rss-fee',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s rss-item">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Fat Footer One', 'auburnagency' ),
 		'id'            => 'fat-footer-one',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s col span_3_of_12">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="footer-widget-title">',
 		'after_title'   => '</h3>',
@@ -234,30 +235,21 @@ function auburnagency_scripts() {
 //		wp_enqueue_script( 'auburnagency-js-extras' );
 
 		// Load jQuery for tabbed displays
+		wp_enqueue_script( 'jquery-ui-tabs' );
+
+		// Load JavaScript for responsive tabs
 		wp_register_script(
-			'auburnagency-js-tabs',
-			get_stylesheet_directory_uri() . '/js/tabs.js',
+			'auburnagency-js-responsive-tabs',
+			get_stylesheet_directory_uri() . '/js/jquery.responsiveTabs.js',
 			array( 'jquery' )
 		);
-		wp_enqueue_script( 'jquery-ui-tabs' );
-		wp_enqueue_script( 'auburnagency-js-tabs' );
-
-//		// Load JavaScript for responsive tabs
-//		wp_register_script(
-//			'auburnagency-js-responsive-tabs',
-//			get_stylesheet_directory_uri() . '/js/jquery.responsiveTabs.js',
-//			array( 'jquery' )
-//		);
-//		wp_enqueue_script( 'auburnagency-js-responsive-tabs' );
-//
-//		// Load styles for responsive tabs
-//		wp_enqueue_style( 'auburnagency-js-responsive-tabs-style', get_stylesheet_directory_uri() . 'css/responsive-tabs.css' );
-//		wp_enqueue_style( 'auburnagency-js-responsive-tabs-basic-style', get_stylesheet_directory_uri() . 'css/style.css' );
+		wp_enqueue_script( 'auburnagency-js-responsive-tabs' );
+		// Load styles for responsive tabs
+		wp_enqueue_style( 'auburnagency-js-responsive-tabs', get_stylesheet_directory_uri() . '/css/responsive-tabs.css' );
 	}
 }
 
 add_action( 'wp_enqueue_scripts', 'auburnagency_scripts' );
-
 
 /**
  * Implement the Custom Header feature.
@@ -348,6 +340,17 @@ if ( ! function_exists('crop_info_center_tabs') ) {
 			'items_list_navigation' => __( 'Items list navigation', 'auburnagency' ),
 			'filter_items_list'     => __( 'Filter items list', 'auburnagency' ),
 		);
+		$capabilities = array(
+			'publish_posts'         => 'edit_others_posts',     // restrict to Editors
+			'edit_posts'            => 'edit_others_posts',
+			'edit_others_posts'     => 'edit_others_posts',
+			'delete_posts'          => 'manage_options',        // restrict to Administrators
+			'delete_others_posts'   => 'manage_options',
+			'read_private_posts'    => 'edit_others_posts',
+			'edit_post'             => 'edit_others_posts',
+			'delete_post'           => 'edit_others_posts',
+			'read_post'             => 'edit_others_posts',
+		);
 		$args = array(
 			'label'                 => __( 'Crop Info Center Tab', 'auburnagency' ),
 			'description'           => __( 'Crop Info Center Tabs', 'auburnagency' ),
@@ -366,7 +369,9 @@ if ( ! function_exists('crop_info_center_tabs') ) {
 			'has_archive'           => true,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
-			'capability_type'       => 'page',
+			'capabilites'           => $capabilities,
+//			'capability_type'       => 'post',
+//			'map_meta_cap'          => true,
 		);
 		register_post_type( 'crop_info_tabs', $args );
 
@@ -374,3 +379,61 @@ if ( ! function_exists('crop_info_center_tabs') ) {
 	add_action( 'init', 'crop_info_center_tabs', 0 );
 
 }
+
+/**
+ * Register Custom Post Type for Daily Messages *
+ *
+ */
+// Register Custom Post Type
+function daily_messages_cpt() {
+
+	$labels = array(
+		'name'                  => _x( 'Daily Messages', 'Post Type General Name', 'auburnagency' ),
+		'singular_name'         => _x( 'Daily Message', 'Post Type Singular Name', 'auburnagency' ),
+		'menu_name'             => __( 'Daily Messages', 'auburnagency' ),
+		'name_admin_bar'        => __( 'Post Type', 'auburnagency' ),
+		'archives'              => __( 'Messages Archives', 'auburnagency' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'auburnagency' ),
+		'all_items'             => __( 'All Messages', 'auburnagency' ),
+		'add_new_item'          => __( 'Add New Message', 'auburnagency' ),
+		'add_new'               => __( 'Add New', 'auburnagency' ),
+		'new_item'              => __( 'New Message', 'auburnagency' ),
+		'edit_item'             => __( 'Edit Message', 'auburnagency' ),
+		'update_item'           => __( 'Update Message', 'auburnagency' ),
+		'view_item'             => __( 'View Message', 'auburnagency' ),
+		'search_items'          => __( 'Search Message', 'auburnagency' ),
+		'not_found'             => __( 'Not found', 'auburnagency' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'auburnagency' ),
+		'featured_image'        => __( 'Featured Image', 'auburnagency' ),
+		'set_featured_image'    => __( 'Set featured image', 'auburnagency' ),
+		'remove_featured_image' => __( 'Remove featured image', 'auburnagency' ),
+		'use_featured_image'    => __( 'Use as featured image', 'auburnagency' ),
+		'insert_into_item'      => __( 'Insert into item', 'auburnagency' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'auburnagency' ),
+		'items_list'            => __( 'Messages list', 'auburnagency' ),
+		'items_list_navigation' => __( 'Messages list navigation', 'auburnagency' ),
+		'filter_items_list'     => __( 'Filter message list', 'auburnagency' ),
+	);
+	$args = array(
+		'label'                 => __( 'Daily Message', 'auburnagency' ),
+		'description'           => __( 'Daily Messages', 'auburnagency' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'revisions', ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 10,
+		'menu_icon'             => 'dashicons-megaphone',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'daily_messages', $args );
+
+}
+add_action( 'init', 'daily_messages_cpt', 0 );

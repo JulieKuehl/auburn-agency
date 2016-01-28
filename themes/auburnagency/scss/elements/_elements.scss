@@ -182,3 +182,12 @@ div,
 p {
     font-family: $font-body;
 }
+
+// CUSTOM elements
+li {
+    margin-left: 2em;
+
+    &:last-of-type {
+        margin-bottom: 1em;
+    }
+}

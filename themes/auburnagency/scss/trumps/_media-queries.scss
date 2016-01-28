@@ -4,7 +4,7 @@
  */
 
 // LARGE SCREENS
- @media screen and (min-width: 769px) {
+ @media screen and (min-width: 979px) {
     .main-navigation {
         display: block!important;
         height: auto!important
@@ -44,13 +44,13 @@
 }
 
 // MEDIUM SCREENS
-@media screen and (min-width: 769px) and (max-width: 768px) {
+@media screen and (min-width: 979px) and (max-width: 978px) {
     .content-area {
         padding-right: 0
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 978px) {
     .comment-body h1,
     .entry-title,
     .error404 .page-title,
@@ -67,7 +67,7 @@
         font-weight: 400
     }
     body {
-        margin-top: 60px
+        margin-top: 120px
     }
     .container,
     .content-container,
@@ -82,7 +82,7 @@
         left: 0;
         z-index: 1;
         width: 100%;
-        height: 60px;
+        height: 120px;
         padding-top: 0;
         padding-bottom: 0;
         background-color: #fff
@@ -211,6 +211,35 @@
         padding-top: 1.875rem;
         padding-bottom: 1.875rem
     }
+    .fat-footer .widget_sp_image {
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    .footer-block {
+        display: table;
+        margin: 1em auto;
+
+        &:last-of-type {
+            margin-bottom: 3em;
+        }
+
+        & .footer-widget-title {
+            text-align: center;
+        }
+
+        & aside {
+            padding-left: 0;
+        }
+    }
+    .footer-links .menu li {
+        width: 100%;
+        text-align: center;
+        padding: 0.5em;
+
+        &:first-of-type {
+            margin-top: 0.5em;
+        }
+    }
 }
 
 // SMALL SCREENS
@@ -264,5 +293,12 @@
     }
     .gallery .gallery-item:last-child {
         margin-right: 0
+    }
+    .fat-footer .fa-stack {
+        margin-right: 0;
+        display: none;
+    }
+    .footer-links .menu li {
+        margin: 0.5em 0 0 0;
     }
 }

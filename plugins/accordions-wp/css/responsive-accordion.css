@@ -1,0 +1,134 @@
+/*	Responsive Accordion v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	============================================================================================ */
+
+/*	Table of Contents
+//	==================================================
+//		#Reset
+//		#Themes
+
+
+/*	#Reset
+//	================================================== */
+
+	.responsive-accordion {
+		margin: 0 0 20px 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	.responsive-accordion li {
+		margin: 0 0 10px 0;
+		padding: 0;
+	}
+
+	.responsive-accordion li:last-child { margin-bottom: 0; }
+
+	.responsive-accordion li .responsive-accordion-head { cursor: pointer; }
+
+	.responsive-accordion li .responsive-accordion-head.active { font-weight: bold; }
+
+
+/*	#Themes
+//	================================================== */
+
+.responsive-accordion-default.responsive-accordion li .responsive-accordion-head {
+  background: none repeat scroll 0 0 #3498db;
+  border: 1px solid #ddd;
+  color: #fff;
+  line-height: normal;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+}
+
+.responsive-accordion-default.responsive-accordion li .responsive-accordion-head i {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+
+.responsive-accordion-default.responsive-accordion li .responsive-accordion-panel {
+	border: 1px solid #DDD;
+	border-top: 0;
+	padding: 20px;
+	background: #FFF;
+}
+
+
+
+
+
+/*	#Themes Two
+//	================================================== */
+
+.two .responsive-accordion-default.responsive-accordion li .responsive-accordion-head {
+  background: none repeat scroll 0 0 #f39c12 !important;
+  border: 1px solid #ddd;
+  color: #fff;
+  line-height: normal;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+}
+
+.two .responsive-accordion-default.responsive-accordion li .responsive-accordion-head i {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+
+.two .responsive-accordion-default.responsive-accordion li .responsive-accordion-panel {
+	border: 1px solid #DDD;
+	border-top: 0;
+	padding: 20px;
+	background: #FFF;
+}
+
+
+/*	#Themes Three
+//	================================================== */
+
+.three .responsive-accordion-default.responsive-accordion li .responsive-accordion-head {
+  background: none repeat scroll 0 0 #2ecc71 !important;
+  border: 1px solid #ddd;
+  color: #fff;
+  line-height: normal;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+}
+
+.three .responsive-accordion-default.responsive-accordion li .responsive-accordion-head i {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+
+.three .responsive-accordion-default.responsive-accordion li .responsive-accordion-panel {
+	border: 1px solid #DDD;
+	border-top: 0;
+	padding: 20px;
+	background: #FFF;
+}
+
+/*	#Themes Four
+//	================================================== */
+
+.four .responsive-accordion-default.responsive-accordion li .responsive-accordion-head {
+  background: none repeat scroll 0 0 #e74c3c !important;
+  border: 1px solid #ddd;
+  color: #fff;
+  line-height: normal;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+}
+
+.four .responsive-accordion-default.responsive-accordion li .responsive-accordion-head i {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+
+.four .responsive-accordion-default.responsive-accordion li .responsive-accordion-panel {
+	border: 1px solid #DDD;
+	border-top: 0;
+	padding: 20px;
+	background: #FFF;
+}

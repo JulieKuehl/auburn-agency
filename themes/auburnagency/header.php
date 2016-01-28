@@ -34,9 +34,5 @@
 				</div>
 			</nav><!-- .main-navigation -->
 
-			<div id="mobile-menu-switch">
-				<a href="" class="toggle">Menu</a>
-			</div>
-
 		</div><!-- .container -->
 	</header><!-- #masthead .site-header -->

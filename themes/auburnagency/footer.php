@@ -12,10 +12,10 @@
 		<div class="footer-container">
 
 			<div class="fat-footer section group">
-				<? dynamic_sidebar( 'fat-footer-one' ); ?>
-				<? dynamic_sidebar( 'fat-footer-two' ); ?>
-				<? dynamic_sidebar( 'fat-footer-three' ); ?>
-				<? dynamic_sidebar( 'fat-footer-four' ); ?>
+				<div class="footer-logo col span_3_of_12"><? dynamic_sidebar( 'fat-footer-one' ); ?></div>
+				<div class="footer-block"><? dynamic_sidebar( 'fat-footer-two' ); ?></div>
+				<div class="footer-block"><? dynamic_sidebar( 'fat-footer-three' ); ?></div>
+				<div class="footer-block"><? dynamic_sidebar( 'fat-footer-four' ); ?></div>
 			</div>
 
 			<div class="footer-links">

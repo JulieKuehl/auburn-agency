@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ip-address-memory-usage\n"
+"POT-Creation-Date: 2015-11-11 08:31+0100\n"
+"PO-Revision-Date: 2015-11-11 08:31+0100\n"
+"Last-Translator: Ramon <marketing@apasionados.es>\n"
+"Language-Team: Apasionados <info@apasionados.es>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: __;_;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../server-ip-memory-usage.php:26
+msgid "Server IP & Memory Usage Display"
+msgstr "Mostrar IP del servidor y uso de memoria"
+
+#: ../server-ip-memory-usage.php:26
+msgid ""
+"Show the memory limit, current memory usage and IP address in the admin "
+"footer."
+msgstr ""
+"Muestra la memoria disponible, el uso actual de la misma y la dirección IP "
+"en el pie de la adminstración de WordPress para los usuarios que son "
+"adminstradores."
+
+#: ../server-ip-memory-usage.php:82
+msgid "N/A"
+msgstr "N/D"
+
+#: ../server-ip-memory-usage.php:88
+msgid "Memory"
+msgstr "Memoria"
+
+#: ../server-ip-memory-usage.php:88
+msgid "of"
+msgstr "de"
+
+#: ../server-ip-memory-usage.php:88
+msgid "WP LIMIT"
+msgstr "LÍMITE WP"

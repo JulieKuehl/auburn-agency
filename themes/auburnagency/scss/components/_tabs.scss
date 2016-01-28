@@ -29,8 +29,8 @@ ul.tabs li,
     color: darken($white, 10%);
     font-size: 0.9em;
 
-    //width: 100 / 7 * 100%; // where 7 is the number of tabs
-    width: 13.5%;  // because it didn't work like I wanted it to
+    //width: 100 / 7 * 100%; // where 8 is the number of tabs
+    width: 11.5%;  // because it didn't work like I wanted it to
 
     &:first-of-type {
         padding-left: 0;
@@ -69,7 +69,9 @@ ul.tabs li,
 
 .col.col-left {
     margin-left: 0;
+    margin-top: -70px;
 }
 .col.col-right {
     margin-right: 0;
+    margin-top: -70px;
 }
