@@ -8,26 +8,34 @@
  */
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'auburnagency' ); ?></h1>
-	</header><!-- .page-header -->
+<section class="page-title">
+	<header class="entry-header container">
+		<h1 class="entry-title">Search</h1>
+	</header><!-- .entry-header -->
+</section>
 
-	<div class="page-content">
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+<section class="content-container">
+	<div class="breadcrumbs">
+		<a href="<?php bloginfo( 'url' ); ?>">Home</a> / Search
+	</div><!-- .breadcrumbs -->
+</section>
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'auburnagency' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+<section class="main-area content-container">
 
-		<?php elseif ( is_search() ) : ?>
+	<div id="primary" class="content-area">
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'auburnagency' ); ?></p>
+		<?php if ( is_search() ) : ?>
+
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching for something else can help.', 'auburnagency' ); ?></p>
 			<?php get_search_form(); ?>
 
-		<?php else : ?>
+					<?php endif; ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'auburnagency' ); ?></p>
-			<?php get_search_form(); ?>
+			</div><!-- #primary -->
 
-		<?php endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+			<?php get_sidebar(); ?>
+
+		</section><!-- .main-area -->
+	</main><!-- #main -->
+
+<?php get_footer(); ?>
