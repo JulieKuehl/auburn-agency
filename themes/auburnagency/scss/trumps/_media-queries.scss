@@ -3,6 +3,13 @@
  *
  */
 
+// SPECIAL area just for the Crop Info Center menu background
+@media screen and (min-width: 979px) and (max-width: 1084px) {
+    .crop-info-center-menu-background {
+        top: 160px;
+    }
+}
+
 // LARGE SCREENS
  @media screen and (min-width: 979px) {
     .main-navigation {
