@@ -201,12 +201,26 @@
     .content-area:last-child {
         margin-right: 0
     }
+    // Message board / weather customization
+    .left.col {
+        padding-right: 0;
+    }
     .widget-area {
         margin-right: 3.57866%
     }
     .widget-area:last-child {
         margin-right: 0
     }
+    // News Feeds customization
+    .rss-item .rss-button {
+        top: 0;
+        float: none;
+        text-align: center;
+    }
+    h3.hungryfeed_feed_title {
+        margin-top: 0.5em;
+    }
+
     .comment-body,
     article.page,
     article.post {
