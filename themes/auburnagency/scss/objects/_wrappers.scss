@@ -80,12 +80,12 @@
     background-color: $color-primary;
     height: 2.5em;
     position: relative;
-    top: 180px;
+    top: 170px;
     z-index: 2;
 }
 
 .crop-info-center-menu {
-    margin-bottom: 3em;
+    margin-bottom: 0;
 }
 
 .slider-area {
@@ -94,23 +94,11 @@
     padding-bottom: 2em;
 }
 
-.info-widgets {
-    border-top: 3px solid $color-primary;
-}
-
 .news-feeds {
     background-color: $light-grey;
     border-top: 3px solid $color-primary;
     padding-bottom: 2em;
     padding-top: 2em;
-
-    //background-color: darken($white, 10%);
-    //background-image: url("/wp-content/themes/auburnagency/images/bg-crop.jpg");
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //height: 100%;
-    //width: 100%;
-    //overflow: hidden;
 }
 
 .twitter-feed,
@@ -160,4 +148,3 @@
 .site-info .container {
     text-align: center;
 }
-

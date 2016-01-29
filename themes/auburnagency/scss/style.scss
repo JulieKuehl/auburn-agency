@@ -103,7 +103,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 //@import "components/nav-links";
 //@import "components/buttons";
 //@import "components/forms";
-//@import "components/slider";
+@import "components/slider";
 @import "components/widgets";
 //@import "components/carousel";
 //@import "components/comments";
@@ -126,6 +126,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 //@import "vendors/responsive-tabs";
 @import "vendors/wp-posts-carousel";
 @import "vendors/accordion-shortcodes";
+@import "vendors/tabby-responsive-tabs";
 
 /*
  * TRUMPS

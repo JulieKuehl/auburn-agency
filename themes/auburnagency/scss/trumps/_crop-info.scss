@@ -29,6 +29,15 @@ span.title-block {
     text-align: center;
 }
 
+.ui-tabs-nav > li {
+    margin-left: 0;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
 .tab-panel-button {
     float: right;
     background-color: $color-secondary;
@@ -67,7 +76,6 @@ span.title-block {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.5em;
-    //background-color: $color-primary;
     position: relative;
     top: -120px;
     height: 150px;
@@ -155,21 +163,31 @@ span.title-block {
         line-height: 1.3;
     }
 
-    .r-tabs-accordion-title {
+    .r-tabs-accordion-title,
+    ul.ui-tabs-nav li {
         background-color: $color-accent;
         color: $white;
         padding: 0.5em 1em;
         margin-top: 0.5em;
         text-transform: uppercase;
+        width: 100%;
+
+        &:first-of-type {
+            margin-top: 1rem;
+        }
 
         & a {
-            //top: -50px;
             color: $white;
             text-decoration: none;
         }
     }
 
-    .r-tabs-anchor img {
+    ul.tabs, .ui-tabs-nav {
+        top: 0;
+    }
+
+    .r-tabs-anchor img,
+    .crop-stage-graphic img {
         display: none;
         float: right;
         width: 50px;
