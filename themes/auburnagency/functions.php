@@ -428,7 +428,7 @@ function daily_messages_cpt() {
 		'label'                 => __( 'Daily Message', 'auburnagency' ),
 		'description'           => __( 'Daily Messages', 'auburnagency' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'revisions', ),
+		'supports'              => array( 'title', 'revisions', ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

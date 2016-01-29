@@ -22,6 +22,8 @@ get_header(); ?>
 						$(".flexslider").flexslider({
 							animation: "slide",
 							directionNav: false,
+							slideshowSpeed: 9000,
+							animationSpeed: 900,
 						});
 					});
 			</script>
