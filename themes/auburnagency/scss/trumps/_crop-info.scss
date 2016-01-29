@@ -15,11 +15,6 @@ span.title-block {
     padding: 0 10px;
 }
 
-.info-panel.col {
-    position: relative;
-    top: -120px;
-}
-
 .crop-info-center h2 {
     text-transform: uppercase;
     font-style: italic;
@@ -35,27 +30,14 @@ span.title-block {
     a {
         color: $white;
         text-decoration: none;
-    }
-}
 
-.tab-panel-button {
-    float: right;
-    background-color: $color-secondary;
-    border: none;
-    color: $white;
-    font-size: 1.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0.5em 1em;
-    margin-top: 3em;
+        &:hover {
+            color: $color-secondary;
+        }
 
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-
-    &:hover {
-        background-color: $color-primary;
-        color: $white;
+        &:active {
+            top: 1px;
+        }
     }
 }
 
