@@ -145,6 +145,15 @@ function auburnagency_widgets_init() {
 		'after_title'   => '</a></h1>',
 	) );
 	register_sidebar( array(
+		'name'          => __( 'Under Twitter Feed', 'auburnagency' ),
+		'id'            => 'under-twitter-feed',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s rss-item">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
 		'name'          => __( 'RSS Feeds', 'auburnagency' ),
 		'id'            => 'rss-fee',
 		'description'   => '',
