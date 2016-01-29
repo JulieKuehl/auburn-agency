@@ -114,8 +114,11 @@ get_header(); ?>
 
 <section class="news-feeds section group">
 	<div class="content-container">
-		<div class="twitter-feed col span_3_of_12">
-			<?php dynamic_sidebar( 'twitter-feed' ); ?>
+		<div class="col span_3_of_12">
+			<div class="twitter-feed">
+				<?php dynamic_sidebar( 'twitter-feed' ); ?>
+			</div>
+			<?php dynamic_sidebar( 'under-twitter-feed' ); ?>
 		</div>
 		<div class="rss-feeds col span_9_of_12">
 			<h2>News Feeds</h2>
