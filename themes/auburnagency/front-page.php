@@ -15,7 +15,7 @@ get_header(); ?>
 <section class="info-widgets section group">
 	<div class="content-container">
 
-		<div class="col span_8_of_12">
+		<div class="left col span_8_of_12">
 
 			<script>
 				jQuery(document).ready(function($) {
@@ -52,7 +52,7 @@ get_header(); ?>
 
 		</div>
 
-		<div class="widget col span_4_of_12">
+		<div class="widget right col span_4_of_12">
 			<h2>Market Data</h2>
 			<?php get_template_part( 'content-front-page-marketdata' ); ?>
 		</div>
