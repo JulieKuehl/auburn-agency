@@ -32,7 +32,8 @@
     //}
 }
 
-.rss-item button {
+.rss-item button,
+.rss-item .rss-button {
     background-color: $color-primary;
     color: $white;
     float: right;
