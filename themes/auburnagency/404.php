@@ -7,22 +7,29 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( '404', 'auburnagency' ); ?></h1>
-				</header><!-- .page-header -->
+		<section class="page-title">
+			<header class="entry-header container">
+				<h1 class="entry-title">Not Found</h1>
+			</header><!-- .entry-header -->
+		</section>
 
-				<div class="page-content">
-					<p><?php _e( 'The page requested could not be found.', 'auburnagency' ); ?></p>
+		<section class="main-area content-container">
+			<div id="primary" class="content-area">
+
+				<div class="entry-content content-container">
+					<p><?php _e( "We couldn't find that. Try again?", 'auburnagency' ); ?></p>
 
 					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				</div><!-- .content-container -->
+			</div><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+		</section>
+
+	</main><!-- #main -->
 
 <?php get_footer(); ?>
