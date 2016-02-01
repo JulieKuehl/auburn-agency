@@ -257,14 +257,14 @@ function auburnagency_scripts() {
 		wp_enqueue_script( 'jquery-ui-tabs' );
 
 		// Load JavaScript for responsive tabs
-		wp_register_script(
-			'auburnagency-js-responsive-tabs',
-			get_stylesheet_directory_uri() . '/js/jquery.responsiveTabs.js',
-			array( 'jquery' )
-		);
-		wp_enqueue_script( 'auburnagency-js-responsive-tabs' );
-		// Load styles for responsive tabs
-		wp_enqueue_style( 'auburnagency-js-responsive-tabs', get_stylesheet_directory_uri() . '/css/responsive-tabs.css' );
+//		wp_register_script(
+//			'auburnagency-js-responsive-tabs',
+//			get_stylesheet_directory_uri() . '/js/jquery.responsiveTabs.js',
+//			array( 'jquery' )
+//		);
+//		wp_enqueue_script( 'auburnagency-js-responsive-tabs' );
+//		// Load styles for responsive tabs
+//		wp_enqueue_style( 'auburnagency-js-responsive-tabs', get_stylesheet_directory_uri() . '/css/responsive-tabs.css' );
 	}
 }
 
