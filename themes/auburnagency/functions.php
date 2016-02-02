@@ -379,3 +379,42 @@ function daily_messages_cpt() {
 
 }
 add_action( 'init', 'daily_messages_cpt', 0 );
+
+
+/**
+BCom Support Widget
+ **/
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+function my_custom_dashboard_widgets() {
+	global $wp_meta_boxes;
+	wp_add_dashboard_widget('custom_help_widget', 'BCom Support', 'custom_dashboard_help');
+}
+function custom_dashboard_help() {
+	echo '<p>Welcome!</p>
+<p>Need help? Contact the BCom Solutions support team by emailing <a href="mailto:web@bcomonline.com">web@bcomonline.com</a>.</p>
+<p>For more innovative solutions visit the <a href="http://www.bcomonline.com" target="_blank">BCom Solutions website.</a></p>
+<div style="text-align: center;">
+<a href="http://www.bcomonline.com" target="_blank"><img style="width: 60%; text-align: center; margin: 0 auto;" src="http://bcomonline.com/Images/DesignedByBCom.png"></a>
+</div>
+';
+}
+/**
+BCom Login Logo
+ **/
+function my_login_logo() { ?>
+	<style type="text/css">
+		.login h1 a {
+			background-image: url(http://bcomonline.com/Images/BCOMPowerSymbol.svg);
+			padding-bottom: 10px;
+		}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+function my_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+function my_login_logo_url_title() {
+	return 'Powered by BCom Solutions, LLC. Built on Wordpress';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
