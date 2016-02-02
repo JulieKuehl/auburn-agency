@@ -14,3 +14,4 @@ plugins/post-types-order
 plugins/backupbuddy
 plugins/easy-twitter-feed-widget
 themes/auburnagency/style.css.map
+plugins/wordfence/tmp/configCache.php
